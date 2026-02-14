@@ -6,32 +6,32 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Is the roast actually useful or just mean?",
-    a: "Both. Every roast comes with specific, actionable advice across 8 categories. The savage tone makes it entertaining (and shareable), but the advice is dead serious. We analyze your headline, CTAs, trust signals, visual hierarchy, copy, page speed, layout, and value proposition.",
+    q: "Is this actually useful or just mean?",
+    a: "Both. The tone is harsh on purpose (it makes the feedback stick, and it's way more fun to share). But every category comes with real fixes you can implement the same day.",
   },
   {
-    q: "What if my landing page is actually good?",
-    a: "Then you'll score high and get a pat on the back (and still find areas to improve). Nobody's perfect, and even a great page has optimization opportunities. Plus, a high score makes for an even better share on social media.",
+    q: "What if my page is actually good?",
+    a: "You'll score high and probably find 2-3 things to improve anyway. Nobody's page is perfect. And a high score is great Twitter content.",
   },
   {
-    q: "How does the AI analyze my page?",
-    a: "We take a full screenshot of your page, then analyze it using advanced AI across 8 critical conversion categories. We look at everything from copy quality to visual hierarchy, CTA effectiveness, trust signals, and more. It's like having a CRO expert and a comedian review your page simultaneously.",
+    q: "How does the analysis work?",
+    a: "We screenshot your page and run it through AI that scores you on 8 things: headline, visual hierarchy, CTAs, trust signals, speed, layout, copy, and value prop. You get a score for each one plus specific advice on what to change.",
   },
   {
     q: "Can I roast a competitor's page?",
-    a: "Absolutely. In fact, that's one of the most popular use cases. Roast their page, share it in your team Slack, then make sure your page doesn't have the same problems. Competitive intelligence with entertainment value.",
+    a: "Yes. People do this constantly. Roast theirs, post it in Slack, then quietly make sure yours isn't just as bad.",
   },
   {
-    q: "What's the 'Fix It For Me' package?",
-    a: "After seeing your roast, if you want professional help fixing the issues, our team will rewrite your copy, optimize your CTAs, provide annotated layout recommendations, give you A/B test headline variants, and a 30-day conversion tracking guide. It's the fast track from roasted to toasted (in a good way).",
+    q: "What's the 'Fix It For Me' thing?",
+    a: "If you see your roast and think \"I don't want to fix this myself\" — we'll do it. Our team rewrites your copy, fixes your CTAs, and gives you an annotated layout with headline variants to test. It's the lazy (smart) option.",
   },
   {
-    q: "Do you store my URL or page data?",
-    a: "We keep the roast results so you can share them via your unique link. The screenshot and analysis are stored for your shareable roast page. We don't sell your data or use it for anything other than generating your roast.",
+    q: "Do you store my data?",
+    a: "We keep the roast so your share link works. We don't sell anything or use your page for training. Your roast is yours.",
   },
   {
     q: "Can I get a refund?",
-    a: "Yes. If your roast isn't useful, email us and we'll refund you. No questions asked. We're that confident in the value.",
+    a: "Yeah. If the roast isn't useful, email us. Full refund, no questions.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function FAQ() {
             Frequently <span className="text-fire-gradient">asked</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Questions we get before people get roasted
+            The stuff people ask before they commit
           </p>
         </motion.div>
 

@@ -6,31 +6,31 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Got roasted. Cried a little. Fixed my headline and CTAs. Conversion rate went up 34% in two weeks. Worth every cent.",
+      "Scored 28. Ouch. But honestly the headline feedback alone was worth it — rewrote it that afternoon and our demo requests went up 34% that same week. Not even kidding.",
     author: "Sarah K.",
     role: "Founder, SaaSlytics",
-    score: "Score: 28/100 → Fixed to 76",
+    score: "28 → 76 after fixes",
   },
   {
     quote:
-      "I sent my roast to my entire marketing team. We fixed everything in a sprint. Best €9 I've ever spent on CRO.",
+      "Dropped this in our marketing Slack channel and we turned it into a whole sprint. Nine euro well spent.",
     author: "Marcus D.",
-    role: "Head of Growth, Finbit",
-    score: "Score: 41/100 → Fixed to 82",
+    role: "Growth, Finbit",
+    score: "41 → 82 after fixes",
   },
   {
     quote:
-      "Roasted my competitor's page and shared it in our Slack. Then we made sure ours didn't have the same problems. Genius.",
+      "Roasted three competitor pages before I roasted ours. Found out we had the same problems. Awkward but useful.",
     author: "Priya L.",
     role: "CMO, DevToolkit",
-    score: "Used it on 3 competitor pages",
+    score: "Roasted 4 pages total",
   },
   {
     quote:
-      "The 'Fix It For Me' package paid for itself in the first week. Our sign-up rate doubled after implementing the recommendations.",
+      "Got the Fix It For Me package because I'm lazy. They rewrote our hero section and CTAs. Sign-ups doubled in a week. Wish I was exaggerating.",
     author: "Jake T.",
     role: "CEO, LaunchPad",
-    score: "Score: 33/100 → Pro fix to 89",
+    score: "33 → 89 with pro fix",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Testimonials() {
             They got <span className="text-fire-gradient">roasted</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            And lived to tell the (profitable) tale
+            Then they fixed their pages and made more money
           </p>
         </motion.div>
 

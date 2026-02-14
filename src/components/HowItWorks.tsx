@@ -8,31 +8,31 @@ const steps = [
     icon: Link,
     title: "Drop your URL",
     description:
-      "Paste your landing page link. We accept any publicly accessible URL.",
+      "Paste any live landing page link. That's it.",
     color: "text-blue-400",
     bgColor: "bg-blue-400/10",
   },
   {
     icon: Search,
-    title: "AI scans everything",
+    title: "We screenshot & scan",
     description:
-      "We screenshot your page and analyze layout, copy, CTAs, trust signals, load speed, and more.",
+      "Layout, copy, CTAs, trust signals, page speed — we look at all of it.",
     color: "text-purple-400",
     bgColor: "bg-purple-400/10",
   },
   {
     icon: Flame,
-    title: "Get absolutely roasted",
+    title: "Get wrecked",
     description:
-      "Receive a brutally honest, entertaining critique with a score across 8 key categories.",
+      "You get a score across 8 categories, a roast that doesn't hold back, and the fixes you actually need.",
     color: "text-flame",
     bgColor: "bg-flame/10",
   },
   {
     icon: BarChart3,
-    title: "Fix & convert more",
+    title: "Fix it, ship it",
     description:
-      "Follow the specific, actionable advice to transform your page into a conversion machine.",
+      "Apply the fixes. Watch your conversion rate stop embarrassing you.",
     color: "text-green-400",
     bgColor: "bg-green-400/10",
   },
@@ -53,7 +53,7 @@ export default function HowItWorks() {
             How the <span className="text-fire-gradient">roasting</span> works
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Four steps to enlightenment (or emotional damage)
+            Four steps. Minimal emotional damage. (We can&apos;t promise that last part.)
           </p>
         </motion.div>
 

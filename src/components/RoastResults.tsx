@@ -150,7 +150,7 @@ export default function RoastResults({ roast }: { roast: RoastResult }) {
   );
 
   const linkedinText = encodeURIComponent(
-    `I just got my landing page roasted by AI and scored ${roast.overallScore}/100. The feedback was brutally honest but incredibly actionable. Highly recommend for anyone serious about conversion optimization.`
+    `Just got my landing page roasted. Scored ${roast.overallScore}/100. Some of the feedback stung but the fixes are already making a difference.`
   );
 
   const domain = (() => {
@@ -375,8 +375,8 @@ export default function RoastResults({ roast }: { roast: RoastResult }) {
             Want us to <span className="text-fire-gradient">fix it</span> for you?
           </h3>
           <p className="text-gray-400 max-w-lg mx-auto mb-6">
-            Our team will rewrite your copy, optimize your CTAs, redesign your layout,
-            and give you A/B test variants. Go from roasted to converting.
+            Don&apos;t want to fix it yourself? We&apos;ll rewrite your copy, redo your
+            CTAs, and hand you an annotated layout with headline variants to test.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -387,7 +387,7 @@ export default function RoastResults({ roast }: { roast: RoastResult }) {
               Fix It For Me — &euro;149
             </a>
             <span className="text-sm text-gray-500">
-              Complete copy + CTA + layout overhaul
+              Copy, CTAs, and layout — done for you
             </span>
           </div>
         </motion.div>
@@ -400,7 +400,7 @@ export default function RoastResults({ roast }: { roast: RoastResult }) {
           transition={{ duration: 0.5, delay: 1 }}
         >
           <p className="text-gray-500 mb-4">
-            Enjoyed the roast? Share it with your team (or enemies).
+            Share this with your team. Or your competitors. We won&apos;t judge.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a

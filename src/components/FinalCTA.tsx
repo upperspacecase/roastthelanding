@@ -22,8 +22,8 @@ export default function FinalCTA() {
           <span className="text-fire-gradient">Your page isn&apos;t fixing itself.</span>
         </h2>
         <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
-          Every day you wait is another day of visitors bouncing. Get your roast,
-          fix the issues, and start converting.
+          You&apos;ve read this far, which means you know your page could be better.
+          Nine euros and 60 seconds is all it takes to find out how much better.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a

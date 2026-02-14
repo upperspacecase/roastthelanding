@@ -18,7 +18,7 @@ export default function Pricing() {
             Simple <span className="text-fire-gradient">pricing</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Less than a sad lunch. More valuable than a $5,000 CRO audit.
+            Cheaper than lunch. More useful than that $5k agency audit collecting dust in your Google Drive.
           </p>
         </motion.div>
 
@@ -43,7 +43,7 @@ export default function Pricing() {
                 Single Roast
               </h3>
               <p className="text-sm text-gray-400">
-                One landing page, one savage roast
+                One page. One roast. Zero mercy.
               </p>
             </div>
 
@@ -58,13 +58,13 @@ export default function Pricing() {
 
             <ul className="space-y-3 mb-8">
               {[
-                "Full 8-category breakdown",
+                "Scored across 8 categories",
                 "Overall conversion score",
-                "Savage headline roast",
-                "Specific actionable advice",
-                "Quick wins checklist",
-                "Shareable roast link",
-                "Screenshot of your page",
+                "A headline roast you'll want to screenshot",
+                "Concrete fixes, not vague advice",
+                "Quick wins you can ship today",
+                "Shareable link (for bragging or crying)",
+                "Screenshot of your page included",
               ].map((feature) => (
                 <li
                   key={feature}
@@ -98,7 +98,7 @@ export default function Pricing() {
                 Fix It For Me
               </h3>
               <p className="text-sm text-gray-400">
-                We rewrite your page for maximum conversions
+                We rewrite your page so it actually works
               </p>
             </div>
 
@@ -114,12 +114,12 @@ export default function Pricing() {
             <ul className="space-y-3 mb-8">
               {[
                 "Everything in Single Roast",
-                "Complete copy rewrite",
-                "CTA optimization strategy",
-                "Layout recommendations (annotated)",
-                "Headline A/B test variants",
+                "Full copy rewrite, top to bottom",
+                "CTAs that people actually click",
+                "Annotated layout mockup",
+                "3 headline variants to A/B test",
                 "Priority email support",
-                "30-day conversion tracking guide",
+                "Conversion tracking setup guide",
               ].map((feature) => (
                 <li
                   key={feature}

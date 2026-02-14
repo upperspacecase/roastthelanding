@@ -2,44 +2,43 @@ import { nanoid } from "nanoid";
 import { RoastResult, RoastCategory } from "./types";
 
 // Roast generation prompt for AI analysis
-const ROAST_SYSTEM_PROMPT = `You are RoastBot, a brutally honest (but helpful) landing page critic. You combine the savage wit of a comedy roast with the analytical precision of a top CRO consultant.
+const ROAST_SYSTEM_PROMPT = `You roast landing pages. You're blunt, funny, and you know conversion. Think "your honest friend who works in marketing" — not corporate, not trying to sound smart, just direct.
 
-Your job is to analyze a landing page and provide:
-1. A savage one-liner headline about the page
-2. An overall score from 0-100
-3. Scores and roasts for 8 categories
-4. Quick win recommendations
+Rules:
+- Be harsh but make every criticism useful. No vague "could be improved" nonsense.
+- Write like a person, not a blog post. Short sentences. No filler words.
+- Don't say "actionable", "leverage", "optimize", "utilize", or "transform".
+- Every piece of advice should be something they can do TODAY.
+- Be funny. Not "dad joke" funny. "Painfully accurate observation" funny.
 
-Be BRUTALLY honest but ALWAYS provide specific, actionable advice. The humor should be sharp but the advice should be genuinely useful.
+Score these 8 categories from 0-10:
+- Headline: Can I tell what this product does and why I'd want it?
+- Visual Hierarchy: Does my eye know where to go?
+- CTA Clarity: Do the buttons tell me what I'm getting?
+- Trust Signals: Any reason to believe this isn't a scam?
+- Page Speed: Does it load fast or do I have time to make coffee?
+- Layout/UX: Does the design help or hurt?
+- Copy Quality: Is the writing about the customer or about the company?
+- Value Proposition: After reading everything, do I know why I should pay?
 
-Categories to evaluate (score each 0-10):
-- Headline: Is it clear, compelling, and benefit-driven?
-- Visual Hierarchy: Does the eye flow naturally? Is there a clear focal point?
-- CTA Clarity: Are CTAs clear, compelling, and well-placed?
-- Trust Signals: Testimonials, logos, social proof, guarantees?
-- Page Speed: How fast does it feel? Heavy images, bloated code?
-- Layout/UX: Is the design clean, modern, and conversion-focused?
-- Copy Quality: Is the writing clear, persuasive, and customer-focused?
-- Value Proposition: Is it immediately clear what this does and why someone should care?
-
-Respond in valid JSON with this exact structure:
+Respond in valid JSON:
 {
-  "headline": "savage one-liner about the page",
+  "headline": "one-liner roast of the page",
   "overallScore": 45,
-  "summary": "2-3 sentence brutal summary",
+  "summary": "2-3 sentence summary, blunt tone",
   "categories": [
     {
       "name": "Headline",
       "score": 3,
       "emoji": "💀",
-      "roast": "savage observation",
-      "advice": "specific actionable fix"
+      "roast": "what's wrong, be specific",
+      "advice": "what to do about it, be concrete"
     }
   ],
-  "quickWins": ["specific quick win 1", "specific quick win 2", "specific quick win 3", "specific quick win 4"]
+  "quickWins": ["fix 1", "fix 2", "fix 3", "fix 4"]
 }
 
-Use these emoji guidelines for scores:
+Emoji guide:
 - 0-2: 💀 or 🪦
 - 3-4: 😵 or 🫠
 - 5-6: 😬 or 🤷
@@ -137,13 +136,13 @@ function generateDemoRoast(url: string): {
   };
 
   const headlines = [
-    `"${domain}" looks like it was designed during a caffeine-fueled panic attack`,
-    `I've seen better conversion optimization on a 404 page`,
+    `${domain} looks like it was designed at 2am the night before launch`,
+    `I've seen better conversion rates on a 404 page`,
     `This page has the persuasive power of a wet napkin`,
-    `If "we ran out of budget" was a landing page`,
+    `If "we'll fix it later" had a landing page, this would be it`,
     `This page converts about as well as a screen door on a submarine`,
-    `Someone spent time on this, and that's honestly the saddest part`,
-    `This is what happens when you let the intern "just make it look nice"`,
+    `Someone clearly tried here. That's what makes it so painful.`,
+    `You know that template you were supposed to customize? Yeah.`,
   ];
 
   const categories: RoastCategory[] = [
@@ -151,85 +150,85 @@ function generateDemoRoast(url: string): {
       name: "Headline",
       score: scores[0],
       emoji: getEmoji(scores[0]),
-      roast: `Your headline is so generic it could be for literally any product in existence. "${domain}" visitors have no idea what you actually do within the first 3 seconds.`,
+      roast: `Your headline could be for literally any product on earth. Someone lands on ${domain} and within 3 seconds they still don't know what you do.`,
       advice:
-        "Rewrite your headline to include: (1) who it's for, (2) what problem it solves, (3) the specific outcome. Example format: '[Target audience] use [Product] to [outcome] without [pain point].'",
+        "Answer one question in your headline: \"Why should I care?\" Include who it's for and what they get. Skip cleverness, be direct.",
     },
     {
       name: "Visual Hierarchy",
       score: scores[1],
       emoji: getEmoji(scores[1]),
       roast:
-        "Everything on this page is competing for attention like toddlers at a birthday party. There's no clear visual flow or focal point.",
+        "Everything on this page is screaming at the same volume. Nothing stands out because everything's trying to stand out.",
       advice:
-        "Establish a clear Z-pattern or F-pattern layout. Make your headline 2x bigger than everything else. Use whitespace aggressively. One primary CTA color, everything else neutral.",
+        "Make your headline the biggest thing on the page. One CTA color, everything else muted. Add more whitespace — you're cramming too much in.",
     },
     {
       name: "CTA Clarity",
       score: scores[2],
       emoji: getEmoji(scores[2]),
       roast:
-        'Your call-to-action is about as motivating as a "Please form an orderly queue" sign. "Get Started" or "Sign Up" tells visitors nothing about what they\'re getting.',
+        "\"Get Started.\" Get started with what? Nobody clicks a button that doesn't tell them what happens next.",
       advice:
-        'Make your CTA button text outcome-focused. Instead of "Sign Up," try "Start Converting More Traffic — Free" or "Get My Custom Report." Add urgency or specificity.',
+        "Your button text should finish the sentence \"I want to...\" — e.g., \"Start my free trial\" or \"See pricing.\" Say what they get, not what they do.",
     },
     {
       name: "Trust Signals",
       score: scores[3],
       emoji: getEmoji(scores[3]),
       roast:
-        "Zero social proof. No testimonials, no customer logos, no numbers. You're asking people to trust a stranger on the internet. Bold strategy.",
+        "No testimonials, no logos, no numbers. You're asking cold traffic to just... trust you? That's not how this works.",
       advice:
-        "Add 3-5 customer testimonials with real names and photos. Show client logos. Display key metrics ('Trusted by X+ companies'). Add a money-back guarantee badge near the CTA.",
+        "Add testimonials with real names and photos. Show logos of customers or press. Put a number on it — \"Used by 500+ teams\" hits harder than nothing.",
     },
     {
       name: "Page Speed",
       score: scores[4],
       emoji: getEmoji(scores[4]),
       roast:
-        "The page loads like it's carrying emotional baggage. Every second of load time costs you 7% in conversions. Do the math on your traffic.",
+        "Your page loads like it's thinking about whether it even wants to. Every extra second costs you roughly 7% of visitors. Run the math.",
       advice:
-        "Optimize images (use WebP, lazy load below-fold). Minimize JavaScript bundles. Use a CDN. Aim for <2s load time. Run Lighthouse and fix every red flag.",
+        "Compress your images (switch to WebP). Lazy load anything below the fold. Cut unused JS. Get load time under 2 seconds.",
     },
     {
       name: "Layout/UX",
       score: scores[5],
       emoji: getEmoji(scores[5]),
       roast:
-        "This layout feels like a Frankenstein of different design trends stitched together. It's not terrible — it's just aggressively mediocre.",
+        "This layout looks like three different designers worked on it and none of them talked to each other.",
       advice:
-        "Pick ONE design system and stick with it. Limit your color palette to 3 colors max. Ensure consistent spacing (8px grid). Mobile-first responsive design is non-negotiable.",
+        "Pick one design direction and commit to it. Three colors max. Consistent spacing. Make sure it looks good on mobile — that's probably where most of your traffic is.",
     },
     {
       name: "Copy Quality",
       score: scores[6],
       emoji: getEmoji(scores[6]),
       roast:
-        "Your copy reads like it was written by someone describing their product to a mirror. It's all features, no benefits. Nobody cares about your tech stack.",
+        "Your copy is a feature list disguised as a landing page. You're describing what your product does. Nobody cares about that. They care about what it does for them.",
       advice:
-        "Rewrite every feature as a benefit. Use the 'So what?' test — for every statement, ask 'so what does this mean for the customer?' Use customer language, not industry jargon.",
+        "For every feature, ask \"so what?\" and write the answer instead. \"Real-time sync\" becomes \"Your team always has the latest version — no more Slack messages asking which file is the right one.\"",
     },
     {
       name: "Value Proposition",
       score: scores[7],
       emoji: getEmoji(scores[7]),
-      roast: `After reading the entire page, I still couldn't explain to a friend what ${domain} does or why they should pay for it. That's a conversion killer.`,
+      roast: `I read the whole page and I genuinely cannot tell someone what ${domain} does or why it costs money. If I can't figure it out, neither can your visitors.`,
       advice:
-        "Your value prop should be crystal clear in 5 seconds. Use the formula: 'We help [audience] achieve [desired outcome] by [mechanism], unlike [alternative] which [limitation].'",
+        "Make it stupid simple: \"[Product] helps [who] do [what] without [pain].\" Put that front and center. You have about 5 seconds before someone bounces.",
     },
   ];
 
   return {
     headline: headlines[Math.floor(Math.random() * headlines.length)],
     overallScore,
-    summary: `${domain} is a masterclass in how NOT to convert visitors. The page suffers from generic messaging, weak CTAs, and a complete absence of social proof. The good news? Every problem here is fixable, and fixing them could dramatically increase your conversion rate.`,
+    summary: `${domain} has the bones of a decent page buried under vague copy, invisible CTAs, and zero reasons for anyone to trust you. The fixes aren't hard — most of them you can do this afternoon — but right now this page is leaving money on the table.`,
     categories,
     quickWins: [
-      "Rewrite your headline to include a specific benefit and measurable outcome",
-      "Add at least 3 customer testimonials with real names, photos, and specific results",
-      `Change your CTA from generic text to something outcome-focused like "Get My Free [Result]"`,
-      "Add a trust bar with client logos or press mentions above the fold",
-      "Remove at least 40% of the text — if it doesn't directly drive conversion, cut it",
+      "Rewrite your headline so it answers \"why should I care?\" in one sentence",
+      "Add 3 customer testimonials with real names and faces above the fold",
+      `Rename your CTA — "Get Started" says nothing. Try "Start my free trial" or "See it in action"`,
+      "Put a trust bar (customer logos or press mentions) near the top of the page",
+      "Cut at least a third of your body copy — if a sentence doesn't drive the click, delete it",
     ],
   };
 }

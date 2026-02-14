@@ -68,7 +68,7 @@ export default function SampleRoast() {
             <span className="text-fire-gradient">looks like</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Real roast. Real tears. Real results.
+            This one hurt. It also tripled their sign-ups.
           </p>
         </motion.div>
 
@@ -140,10 +140,10 @@ export default function SampleRoast() {
             </h4>
             <ul className="space-y-2">
               {[
-                "Rewrite your headline to include a specific benefit and outcome",
-                "Add 3-5 customer testimonials with real names and photos",
-                "Change CTA from \"Get Started\" to \"Start Converting More — Free Trial\"",
-                "Remove 60% of the visual noise above the fold",
+                "Your headline should answer \"why should I care?\" in under 5 words",
+                "Put 3 real customer testimonials above the fold — with faces, not logos",
+                "Rename that \"Get Started\" button to literally anything that tells people what they get",
+                "Delete half the stuff above the fold. If it's not driving the click, it's blocking it",
               ].map((win) => (
                 <li
                   key={win}

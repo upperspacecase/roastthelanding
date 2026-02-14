@@ -46,13 +46,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Submit your URL. Our AI will{" "}
-          <span className="text-flame font-semibold">brutally analyze</span>{" "}
-          every pixel, word, and CTA. You get a savage roast with{" "}
+          Paste your URL. We&apos;ll tear apart your headline,
+          CTAs, layout, copy, and trust signals — then tell you{" "}
+          <span className="text-flame font-semibold">exactly what to fix</span>{" "}
+          so you stop{" "}
           <span className="text-ember font-semibold">
-            specific, actionable advice
+            bleeding visitors
           </span>{" "}
-          to actually convert visitors into customers.
+          and start making money.
         </motion.p>
 
         <motion.div
@@ -95,8 +96,8 @@ export default function Hero() {
             ))}
           </div>
           <p className="text-sm text-gray-500">
-            <span className="text-foreground font-semibold">2,847+</span>{" "}
-            landing pages roasted and counting
+            <span className="text-foreground font-semibold">2,847</span>{" "}
+            pages roasted so far
           </p>
         </motion.div>
 

@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${domain} scored ${roast.overallScore}/100 | RoastMyLanding`,
-    description: `"${roast.headline}" — See the full roast with conversion advice.`,
+    description: `"${roast.headline}" — Full breakdown across 8 categories.`,
     openGraph: {
       title: `${domain} just got ROASTED — ${roast.overallScore}/100`,
-      description: `"${roast.headline}" — Brutal AI landing page roast with specific conversion advice.`,
+      description: `"${roast.headline}" — See the full breakdown and find out what needs fixing.`,
       type: "article",
       siteName: "RoastMyLanding",
     },

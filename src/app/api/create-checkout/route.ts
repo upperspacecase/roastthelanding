@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
               currency: "eur",
               product_data: {
                 name: "Landing Page Roast",
-                description: `Brutal AI roast of ${new URL(url).hostname} with actionable conversion advice`,
+                description: `Landing page roast for ${new URL(url).hostname} — scored across 8 categories with fixes`,
               },
               unit_amount: 900, // €9.00
             },
